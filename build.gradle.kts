@@ -13,8 +13,11 @@ subprojects {
 	apply(plugin = "maven-publish")
 
 	repositories {
-		mavenCentral()
-		mavenLocal()
+    mavenCentral()
+    maven("https://maven.fabricmc.net/")
+    maven("https://maven.quiltmc.org/repository/release/")
+    maven("https://maven.quiltmc.org/repository/snapshot/")
+}
 
 		exclusiveContent {
 			forRepository {
