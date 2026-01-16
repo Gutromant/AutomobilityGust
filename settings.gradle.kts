@@ -10,4 +10,13 @@ pluginManagement {
     }
 }
 
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven("https://maven.fabricmc.net/")
+        maven("https://maven.quiltmc.org/repository/release/")
+        maven("https://maven.quiltmc.org/repository/snapshot/")
+    }
+}
+
 include("common", "fabric", "neoforge")
