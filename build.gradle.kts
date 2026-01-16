@@ -13,11 +13,15 @@ subprojects {
 	apply(plugin = "maven-publish")
 
 	repositories {
-    mavenCentral()
-    maven("https://maven.fabricmc.net/")
-    maven("https://maven.quiltmc.org/repository/release/")
-    maven("https://maven.quiltmc.org/repository/snapshot/")
-}
+    maven {
+        name = "QuiltMC"
+        url = "https://maven.quiltmc.org/repository/release"
+    }
+    
+    maven {
+        name = "QuiltMC Snapshots"
+        url = "https://maven.quiltmc.org/repository/snapshot"
+    }
 
 		exclusiveContent {
 			forRepository {
