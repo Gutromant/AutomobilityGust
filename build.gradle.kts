@@ -1,6 +1,6 @@
 plugins {
 	id("java")
-	id("fabric-loom") version "1.9.2-SNAPSHOT" apply false
+	id("fabric-loom") version "1.9.2" apply false
 }
 
 allprojects {
