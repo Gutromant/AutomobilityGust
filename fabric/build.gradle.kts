@@ -6,14 +6,15 @@ plugins {
 }
 
 repositories {
-    mavenCentral()
-    maven("https://maven.fabricmc.net/")
-    maven("https://maven.quiltmc.org/repository/release/")
-    maven("https://maven.quiltmc.org/repository/snapshot/")
-    maven("https://maven.terraformersmc.com/")
-    maven("https://maven.isxander.dev/releases")
-}
-
+     maven {
+        name = "QuiltMC"
+        url = "https://maven.quiltmc.org/repository/release"
+    }
+    
+    maven {
+        name = "QuiltMC Snapshots"
+        url = "https://maven.quiltmc.org/repository/snapshot"
+    }
 
 dependencies {
     minecraft("com.mojang:minecraft:${rootProject.properties["minecraft_version"]}")
