@@ -6,14 +6,14 @@ plugins {
 }
 
 repositories {
-    mavenLocal()
-    maven { url = uri("https://maven.fabricmc.net") }
-    maven { url = uri("https://maven.terraformersmc.com/") }
-    maven { url = uri("https://ueaj.dev/maven") }
-    maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
-    maven { url = uri("https://jitpack.io") }
-    maven { url = uri("https://maven.isxander.dev/releases") }
+    mavenCentral()
+    maven("https://maven.fabricmc.net/")
+    maven("https://maven.quiltmc.org/repository/release/")
+    maven("https://maven.quiltmc.org/repository/snapshot/")
+    maven("https://maven.terraformersmc.com/")
+    maven("https://maven.isxander.dev/releases")
 }
+
 
 dependencies {
     minecraft("com.mojang:minecraft:${rootProject.properties["minecraft_version"]}")
